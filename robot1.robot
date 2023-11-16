@@ -18,13 +18,17 @@ Log in Wikipedia
     select checkbox    wpRemember
     click button     id:wpLoginAttempt
 
+Search Wiki
+    [Arguments]    ${text}
+    input text    name:search   ${text}
+    press keys    name:search      ENTER
+
 *** Test Cases ***
 Successful login
     Log in Wikipedia    ${user}    ${correct password}
     Page Should Not Contain Element    css:.mw-message-box-error
     Wait Until Element Is Visible    name:search    5
-    input text    name:search   Poland
-    press keys    name:search      ENTER
+    Search Wiki     Poland
     close browser
 
 Nonsuccessful login
