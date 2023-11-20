@@ -11,12 +11,18 @@ print(df.Gender.value_counts())
 df.Height *= 2.54
 df.Weight /= 2.2
 print('Units changed')
-print(df)
-sns.histplot(data=df, x='Weight', hue='Gender')
-plt.show()
+# print(df)
+# sns.histplot(data=df, x='Weight', hue='Gender')
+# plt.show()
 
 df = pd.get_dummies(df)
 print(df)
 del (df["Gender_Male"])
 df.rename(columns={'Gender_Female': 'Gender'}, inplace=True)
 print(df)
+
+model = LinearRegression()
+model.fit(df[['Height', 'Gender']], df['Weight'])
+print(model.coef_, model.intercept_)
+
+print(f'Equation is: Height * {model.coef_[0]} + gender * {model.coef_[1]} + {model.intercept_}')
