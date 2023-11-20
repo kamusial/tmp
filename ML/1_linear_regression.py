@@ -12,7 +12,11 @@ df.Height *= 2.54
 df.Weight /= 2.2
 print('Units changed')
 print(df)
-sns.histplot(df.Weight)
+sns.histplot(data=df, x='Weight', hue='Gender')
 plt.show()
 
-
+df = pd.get_dummies(df)
+print(df)
+del (df["Gender_Male"])
+df.rename(columns={'Gender_Female': 'Gender'}, inplace=True)
+print(df)
