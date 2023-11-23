@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Resource    resources.robot
 Test Setup    Open Wikipedia
 Test Teardown      Close Browser
 
@@ -9,23 +10,9 @@ ${user}    RobotTests
 ${correct password}    RobotFramework
 ${wrong password}    12345
 ${message}    Incorrect username or password entered. Please try again.
+${screenshot_path}  C:/Users/vdi-student/Desktop
 *** Keywords ***
-Log in Wikipedia
-    [Arguments]    ${login}    ${password}
-    click element    id:pt-login-2
-    Wait Until Element Is Visible     id:wpName1    5
-    input text     id:wpName1    ${login}
-    input text    id:wpPassword1    ${password}
-    select checkbox    wpRemember
-    click button     id:wpLoginAttempt
 
-Search Wiki
-    [Arguments]    ${text}
-    input text    name:search   ${text}
-    press keys    name:search      ENTER
-
-Open Wikipedia
-    open browser    https://en.wikipedia.org
 
 *** Test Cases ***
 #Successful login
@@ -38,8 +25,8 @@ Open Wikipedia
 Nonsuccessful login
     [Documentation]    Comment
     Log in Wikipedia    ${user}    ${wrong password}
-    wait Until Element Is Visible    css:.mw-message-box-error    5
-    Capture Page Screenshot
+    wait Until Element Is Visible    css:.mw-message-box-error    60
+    Capture Page Screenshot    ${screenshot_path}/screen{index}.png
     ${my_error_message}    get text    css:.mw-message-box-error
     log to console    ${my_error_message}
     should be equal    ${message}   ${my_error_message}
