@@ -1,98 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.2 on win32)" generated="20231123 14:33:39.815" rpa="false" schemaversion="4">
-<suite id="s1" name="Robot1" source="C:\Users\vdi-student\Desktop\tmp\robot1.robot">
-<test id="s1-t1" name="Nonsuccessful login" line="25">
-<kw name="Open Wikipedia" library="resources" type="SETUP">
+<robot generator="Robot 6.1.1 (Python 3.11.2 on win32)" generated="20231130 14:25:41.619" rpa="false" schemaversion="4">
+<suite id="s1" name="Robot3" source="C:\Users\vdi-student\Desktop\tmp\robot3.robot">
+<test id="s1-t1" name="test" line="14">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://en.wikipedia.org</arg>
+<arg>https://gotujmy.pl/forum/</arg>
+<arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231123 14:33:40.070" level="INFO">Opening browser 'firefox' to base url 'https://en.wikipedia.org'.</msg>
-<msg timestamp="20231123 14:33:40.085" level="INFO">Executing: C:\Users\vdi-student\AppData\Roaming\Python\Python311\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser firefox --output json</msg>
-<status status="PASS" starttime="20231123 14:33:40.070" endtime="20231123 14:33:52.823"/>
+<msg timestamp="20231130 14:25:41.869" level="INFO">Opening browser 'Chrome' to base url 'https://gotujmy.pl/forum/'.</msg>
+<status status="PASS" starttime="20231130 14:25:41.869" endtime="20231130 14:25:44.882"/>
 </kw>
-<status status="PASS" starttime="20231123 14:33:40.070" endtime="20231123 14:33:52.823"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231130 14:25:44.883" endtime="20231130 14:25:45.009"/>
 </kw>
-<kw name="Log in Wikipedia" library="resources">
-<arg>${user}</arg>
-<arg>${wrong password}</arg>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id:pt-login-2</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231123 14:33:52.826" level="INFO">Clicking element 'id:pt-login-2'.</msg>
-<status status="PASS" starttime="20231123 14:33:52.825" endtime="20231123 14:33:54.043"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231130 14:25:48.012" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231130 14:25:45.009" endtime="20231130 14:25:48.012"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>id:wpName1</arg>
-<arg>5</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20231123 14:33:54.043" endtime="20231123 14:33:54.088"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:wpName1</arg>
-<arg>${login}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231123 14:33:54.089" level="INFO">Typing text 'RobotTests' into text field 'id:wpName1'.</msg>
-<status status="PASS" starttime="20231123 14:33:54.088" endtime="20231123 14:33:54.122"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:wpPassword1</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231123 14:33:54.123" level="INFO">Typing text '12345' into text field 'id:wpPassword1'.</msg>
-<status status="PASS" starttime="20231123 14:33:54.122" endtime="20231123 14:33:54.148"/>
-</kw>
-<kw name="Select Checkbox" library="SeleniumLibrary">
-<arg>wpRemember</arg>
-<doc>Selects the checkbox identified by ``locator``.</doc>
-<msg timestamp="20231123 14:33:54.148" level="INFO">Selecting checkbox 'wpRemember'.</msg>
-<status status="PASS" starttime="20231123 14:33:54.148" endtime="20231123 14:33:54.373"/>
-</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>click button</arg>
+<arg>//*[@id="tcf277-permissions-modal"]/div[3]/div/button[2]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>id:wpLoginAttempt</arg>
+<arg>//*[@id="tcf277-permissions-modal"]/div[3]/div/button[2]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231123 14:33:54.375" level="INFO">Clicking button 'id:wpLoginAttempt'.</msg>
-<status status="PASS" starttime="20231123 14:33:54.373" endtime="20231123 14:33:55.337"/>
+<msg timestamp="20231130 14:25:48.012" level="INFO">Clicking button '//*[@id="tcf277-permissions-modal"]/div[3]/div/button[2]'.</msg>
+<msg timestamp="20231130 14:25:48.164" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231130 14:25:48.164" level="FAIL">Button with locator '//*[@id="tcf277-permissions-modal"]/div[3]/div/button[2]' not found.</msg>
+<status status="FAIL" starttime="20231130 14:25:48.012" endtime="20231130 14:25:48.169"/>
 </kw>
-<status status="PASS" starttime="20231123 14:33:52.824" endtime="20231123 14:33:55.337"/>
+<status status="PASS" starttime="20231130 14:25:48.012" endtime="20231130 14:25:48.169"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>css:.mw-message-box-error</arg>
-<arg>60</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20231123 14:33:55.338" endtime="20231123 14:33:55.373"/>
-</kw>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<arg>${screenshot_path}/screen{index}.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20231123 14:33:55.420" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screen3.png"&gt;&lt;img src="../screen3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20231123 14:33:55.374" endtime="20231123 14:33:55.420"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${my_error_message}</var>
-<arg>css:.mw-message-box-error</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231123 14:33:55.454" level="INFO">${my_error_message} = Incorrect username or password entered. Please try again.</msg>
-<status status="PASS" starttime="20231123 14:33:55.420" endtime="20231123 14:33:55.454"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${my_error_message}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231123 14:33:55.454" endtime="20231123 14:33:55.455"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${message}</arg>
-<arg>${my_error_message}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20231123 14:33:55.455" endtime="20231123 14:33:55.456"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231123 14:33:55.456" endtime="20231123 14:33:58.617"/>
-</kw>
-<doc>Comment</doc>
-<status status="PASS" starttime="20231123 14:33:40.070" endtime="20231123 14:33:58.617"/>
+<status status="PASS" starttime="20231130 14:25:41.869" endtime="20231130 14:25:48.169"/>
 </test>
-<status status="PASS" starttime="20231123 14:33:39.820" endtime="20231123 14:33:58.617"/>
+<status status="PASS" starttime="20231130 14:25:41.619" endtime="20231130 14:25:48.169"/>
 </suite>
 <statistics>
 <total>
@@ -101,7 +44,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Robot1">Robot1</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot3">Robot3</stat>
 </suite>
 </statistics>
 <errors>

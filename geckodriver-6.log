@@ -1,15 +1,20 @@
-1700745016449	geckodriver	INFO	Listening on 127.0.0.1:50329
-1700745016963	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50330" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\VDI-ST~1\\AppData\\Local\\Temp\\rust_mozprofile4OBXYO"
+1701350032825	geckodriver	INFO	Listening on 127.0.0.1:50530
+1701350033338	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50531" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\VDI-ST~1\\AppData\\Local\\Temp\\rust_mozprofilefsdOY9"
 console.warn: services.settings: Ignoring preference override of remote settings server
 console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-1700745017593	Marionette	INFO	Marionette enabled
+1701350033907	Marionette	INFO	Marionette enabled
 Dynamically enable window occlusion 0
-1700745017699	Marionette	INFO	Listening on port 50335
-WebDriver BiDi listening on ws://127.0.0.1:50330
-Read port: 50335
-1700745017882	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-DevTools listening on ws://127.0.0.1:50330/devtools/browser/730f8d49-2698-4316-97e5-6003459639b2
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://en.wikipedia.org."
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://en.wikipedia.org."
-1700745031672	Marionette	INFO	Stopped listening on port 50335
+1701350033993	Marionette	INFO	Listening on port 50536
+WebDriver BiDi listening on ws://127.0.0.1:50531
+Read port: 50536
+1701350034178	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:50531/devtools/browser/a10ca0c2-da07-48c0-9feb-4a79ab59672f
+1701350064934	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://edipresse.hit.gemius.pl/xgemius.js, line 447: Script terminated by timeout at:
+GemiusHitcolConnector/this.bind/<@https://edipresse.hit.gemius.pl/xgemius.js:447:19
+
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 573: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 573: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 573: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1701350115876	Marionette	INFO	Stopped listening on port 50536
 Dynamically enable window occlusion 1

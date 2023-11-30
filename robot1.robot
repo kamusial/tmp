@@ -15,11 +15,11 @@ ${screenshot_path}  C:/Users/vdi-student/Desktop
 
 
 *** Test Cases ***
-#Successful login
-#    Log in Wikipedia    ${user}    ${correct password}
-#    Page Should Not Contain Element    css:.mw-message-box-error
-#    Wait Until Element Is Visible    name:search    5
-#    Search Wiki     Poland
+Successful login
+    Log in Wikipedia    ${user}    ${correct password}
+    Page Should Not Contain Element    css:.mw-message-box-error
+    Wait Until Element Is Visible    name:search    5
+    Search Wiki     Poland
 
 
 Nonsuccessful login
