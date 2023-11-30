@@ -1,41 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.2 on win32)" generated="20231130 14:25:41.619" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.2 on win32)" generated="20231130 14:45:54.820" rpa="false" schemaversion="4">
 <suite id="s1" name="Robot3" source="C:\Users\vdi-student\Desktop\tmp\robot3.robot">
-<test id="s1-t1" name="test" line="14">
+<test id="s1-t1" name="test" line="19">
+<kw name="Open My Browser">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://gotujmy.pl/forum/</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231130 14:25:41.869" level="INFO">Opening browser 'Chrome' to base url 'https://gotujmy.pl/forum/'.</msg>
-<status status="PASS" starttime="20231130 14:25:41.869" endtime="20231130 14:25:44.882"/>
+<msg timestamp="20231130 14:45:55.040" level="INFO">Opening browser 'Chrome' to base url 'https://gotujmy.pl/forum/'.</msg>
+<status status="PASS" starttime="20231130 14:45:55.040" endtime="20231130 14:45:57.735"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231130 14:25:44.883" endtime="20231130 14:25:45.009"/>
+<status status="PASS" starttime="20231130 14:45:57.735" endtime="20231130 14:45:57.852"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231130 14:25:48.012" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20231130 14:25:45.009" endtime="20231130 14:25:48.012"/>
+<msg timestamp="20231130 14:46:00.853" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231130 14:45:57.852" endtime="20231130 14:46:00.853"/>
 </kw>
-<kw name="Run Keyword And Ignore Error" library="BuiltIn">
-<arg>click button</arg>
-<arg>//*[@id="tcf277-permissions-modal"]/div[3]/div/button[2]</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>//*[@id="tcf277-permissions-modal"]/div[3]/div/button[2]</arg>
+<arg>//*[@id="qc-cmp2-ui"]/div[2]/div/button[2]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231130 14:25:48.012" level="INFO">Clicking button '//*[@id="tcf277-permissions-modal"]/div[3]/div/button[2]'.</msg>
-<msg timestamp="20231130 14:25:48.164" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20231130 14:25:48.164" level="FAIL">Button with locator '//*[@id="tcf277-permissions-modal"]/div[3]/div/button[2]' not found.</msg>
-<status status="FAIL" starttime="20231130 14:25:48.012" endtime="20231130 14:25:48.169"/>
+<msg timestamp="20231130 14:46:00.853" level="INFO">Clicking button '//*[@id="qc-cmp2-ui"]/div[2]/div/button[2]'.</msg>
+<status status="PASS" starttime="20231130 14:46:00.853" endtime="20231130 14:46:01.023"/>
 </kw>
-<status status="PASS" starttime="20231130 14:25:48.012" endtime="20231130 14:25:48.169"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231130 14:46:04.024" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231130 14:46:01.023" endtime="20231130 14:46:04.024"/>
 </kw>
-<status status="PASS" starttime="20231130 14:25:41.869" endtime="20231130 14:25:48.169"/>
+<status status="PASS" starttime="20231130 14:45:55.040" endtime="20231130 14:46:04.024"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="navTop"]/nav/ul[1]/li[2]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231130 14:46:04.025" level="INFO">Clicking element '//*[@id="navTop"]/nav/ul[1]/li[2]/a'.</msg>
+<status status="PASS" starttime="20231130 14:46:04.025" endtime="20231130 14:46:04.602"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231130 14:46:05.605" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231130 14:46:04.602" endtime="20231130 14:46:05.605"/>
+</kw>
+<status status="PASS" starttime="20231130 14:45:55.035" endtime="20231130 14:46:05.605"/>
 </test>
-<status status="PASS" starttime="20231130 14:25:41.619" endtime="20231130 14:25:48.169"/>
+<status status="PASS" starttime="20231130 14:45:54.825" endtime="20231130 14:46:05.605"/>
 </suite>
 <statistics>
 <total>
