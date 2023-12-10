@@ -14,7 +14,7 @@ Open My Browser
 #    Scroll Element Into View    //*[@id="tcf277-permissions-modal"]/div[3]/div/button[2]
     click button   //*[@id="qc-cmp2-ui"]/div[2]/div/button[2]
     sleep    1
-
+# comment
 Registration
     [Arguments]    ${email}    ${password}
     Click Element    //*[@id="navTop"]/nav/ul[1]/li[2]/a
