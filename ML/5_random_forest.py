@@ -7,6 +7,8 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import confusion_matrix
 from sklearn.tree import DecisionTreeClassifier
 from mlxtend.plotting import plot_decision_regions
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
 
 df = pd.read_csv('iris.csv')
 print(df['class'].value_counts())
@@ -20,9 +22,10 @@ print(df.to_string())
 
 X = df.iloc[:, :2]
 y = df.class_values
-model = DecisionTreeClassifier(max_depth=99, min_samples_split=20)
-model.fit(X, y)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+model = RandomForestClassifier(n_estimators=1000, max_depth=4, min_samples_split=2)
+model.fit(X_train, y_train)
 
 print(pd.DataFrame(model.feature_importances_, X.columns))
-plot_decision_regions(X.values, y.values, model)
-plt.show()
+print(model.score(X_test, y_test))
+print(pd.DataFrame(confusion_matrix(y_test, model.predict(X_test))))
